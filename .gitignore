@@ -116,6 +116,7 @@ tags
 *.su
 
 # PlatformIO files/dirs
+*.tags
 .pio*
 .pioenvs
 .piolibdeps
