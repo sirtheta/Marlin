@@ -1724,6 +1724,14 @@
 #define REVERSE_MENU_DIRECTION // K8200: for Display VM8201 encoder on right side
 
 //
+// This option reverses the encoder direction for Select Screen.
+//
+//  If CLOCKWISE normally moves LEFT this makes it go RIGHT.
+//  If CLOCKWISE normally moves RIGHT this makes it go LEFT.
+//
+//#define REVERSE_SELECT_DIRECTION
+
+//
 // Individual Axis Homing
 //
 // Add individual axis homing items (Home X, Home Y, and Home Z) to the LCD menu.
@@ -2002,6 +2010,11 @@
 //#define SILVER_GATE_GLCD_CONTROLLER
 
 #endif // K8200_VM8201
+
+//
+// Overlord OLED display/controller with i2c buzzer and LEDs
+//
+//#define OVERLORD_OLED
 
 //=============================================================================
 //========================== Extensible UI Displays ===========================
