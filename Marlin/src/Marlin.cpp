@@ -217,9 +217,9 @@ void setup_killpin() {
 
 void setup_powerhold() {
   #if HAS_SUICIDE
-    OUT_WRITE(SUICIDE_PIN, HIGH);
+    OUT_WRITE(SUICIDE_PIN, !SUICIDE_PIN_INVERTING);
   #endif
-  #if HAS_POWER_SWITCH
+  #if ENABLED(PSU_CONTROL)
     #if ENABLED(PS_DEFAULT_OFF)
       powersupply_on = true;  PSU_OFF();
     #else
@@ -721,7 +721,7 @@ void minkill(const bool steppers_off/*=false*/) {
   // Power off all steppers (for M112) or just the E steppers
   steppers_off ? disable_all_steppers() : disable_e_steppers();
 
-  #if HAS_POWER_SWITCH
+  #if ENABLED(PSU_CONTROL)
     PSU_OFF();
   #endif
 
