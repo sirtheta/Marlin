@@ -29,7 +29,7 @@
  *
  */
 
-namespace Language_ch {
+namespace Language_ch_be {
   using namespace Language_en; // Inherit undefined strings from English
 
   constexpr uint8_t    CHARSIZE                            = 2;
@@ -40,7 +40,7 @@ namespace Language_ch {
   PROGMEM Language_Str MSG_YES                             = _UxGT("JA");
   PROGMEM Language_Str MSG_NO                              = _UxGT("NEIN");
   PROGMEM Language_Str MSG_BACK                            = _UxGT("Zurück");
-  PROGMEM Language_Str MSG_MEDIA_ABORTING                  = _UxGT("Abbruch...");
+  PROGMEM Language_Str MSG_MEDIA_ABORTING                  = _UxGT("Abbräche...");
   PROGMEM Language_Str MSG_MEDIA_INSERTED                  = _UxGT("Medium erkannt");
   PROGMEM Language_Str MSG_MEDIA_REMOVED                   = _UxGT("Medium entfernt");
   PROGMEM Language_Str MSG_MEDIA_RELEASED                  = _UxGT("Medium freigegeben");
@@ -412,7 +412,7 @@ namespace Language_ch {
   PROGMEM Language_Str MSG_DWELL                           = _UxGT("Warten...");
   PROGMEM Language_Str MSG_USERWAIT                        = _UxGT("Klick zum Fortsetzen");
   PROGMEM Language_Str MSG_PRINT_PAUSED                    = _UxGT("Druck pausiert...");
-  PROGMEM Language_Str MSG_PRINTING                        = _UxGT("Druckt...");
+  PROGMEM Language_Str MSG_PRINTING                        = _UxGT("es Druckt...");
   PROGMEM Language_Str MSG_PRINT_ABORTED                   = _UxGT("Druck abgebrochen");
   PROGMEM Language_Str MSG_NO_MOVE                         = _UxGT("Motoren angeschaltet");
   PROGMEM Language_Str MSG_KILLED                          = _UxGT("ABGEBROCHEN");
@@ -505,10 +505,10 @@ namespace Language_ch {
   PROGMEM Language_Str MSG_SHORT_DAY                       = _UxGT("t"); // One character only
   PROGMEM Language_Str MSG_SHORT_HOUR                      = _UxGT("h"); // One character only
   PROGMEM Language_Str MSG_SHORT_MINUTE                    = _UxGT("m"); // One character only
-  PROGMEM Language_Str MSG_HEATING                         = _UxGT("heizt...");
-  PROGMEM Language_Str MSG_COOLING                         = _UxGT("kühlt...");
-  PROGMEM Language_Str MSG_BED_HEATING                     = _UxGT("Bett heizt...");
-  PROGMEM Language_Str MSG_BED_COOLING                     = _UxGT("Bett kühlt...");
+  PROGMEM Language_Str MSG_HEATING                         = _UxGT("ufheizä...");
+  PROGMEM Language_Str MSG_COOLING                         = _UxGT("abchüelä...");
+  PROGMEM Language_Str MSG_BED_HEATING                     = _UxGT("Bett ufheizä...");
+  PROGMEM Language_Str MSG_BED_COOLING                     = _UxGT("Bett abchüelä...");
   PROGMEM Language_Str MSG_CHAMBER_HEATING                 = _UxGT("Gehäuse heizt...");
   PROGMEM Language_Str MSG_CHAMBER_COOLING                 = _UxGT("Gehäuse kühlt...");
   PROGMEM Language_Str MSG_DELTA_CALIBRATE                 = _UxGT("Delta kalibrieren");
