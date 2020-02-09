@@ -22,17 +22,21 @@
 #pragma once
 
 /**
- * Test TEENSY35_36 specific configuration values for errors at compile-time.
+ * Pin assignments for the MKS RUMBA32
+ *
+ * https://aus3d.com.au/rumba32
+ * https://github.com/Aus3D/RUMBA32
+ *
+ * The MKS and Aus3D versions have the same pinout but the MKS version
+ * has some added resistors and LEDs.  The resistors needed for the
+ * TMC2208/9 UART interface are among the additions.  Also added were
+ * connectors and resistors dedicated to the TMC2130 sensorless homing
+ * interface.
  */
 
-#if ENABLED(EMERGENCY_PARSER)
-  #error "EMERGENCY_PARSER is not yet implemented for Teensy 3.1/3.2. Disable EMERGENCY_PARSER to continue."
-#endif
+#define BOARD_INFO_NAME "Aus3D RUMBA32"
 
-#if ENABLED(FAST_PWM_FAN)
-  #error "FAST_PWM_FAN is not yet implemented for this platform."
-#endif
+#define RUMBA32_V1_0
+//#define I2C_EEPROM
 
-#if HAS_TMC_SW_SERIAL
-  #error "TMC220x Software Serial is not supported on this platform."
-#endif
+#include "pins_RUMBA32_common.h"
