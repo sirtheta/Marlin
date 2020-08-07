@@ -1082,18 +1082,18 @@
 #define Z_ENABLE_ON 0
 #define E_ENABLE_ON 0 // For all extruders
 
-// Disables axis stepper immediately when it's not being used.
+// Disable axis steppers immediately when they're not being stepped.
 // WARNING: When motors turn off there is a chance of losing position accuracy!
 #define DISABLE_X false
 #define DISABLE_Y false
 #define DISABLE_Z false
 
-// Warn on display about possibly reduced accuracy
+// Turn off the display blinking that warns about possible accuracy reduction
 //#define DISABLE_REDUCED_ACCURACY_WARNING
 
 // @section extruder
 
-#define DISABLE_E false             // For all extruders
+#define DISABLE_E false             // Disable the extruder when not stepping
 #define DISABLE_INACTIVE_EXTRUDER   // Keep only the active extruder enabled
 
 // @section machine
@@ -2143,6 +2143,16 @@
 //#define TOUCH_UI_FTDI_EVE
 
 //
+// Touch-screen LCD for Anycubic printers
+//
+//#define ANYCUBIC_LCD_I3MEGA
+//#define ANYCUBIC_LCD_CHIRON
+#if EITHER(ANYCUBIC_LCD_I3MEGA, ANYCUBIC_LCD_CHIRON)
+  #define ANYCUBIC_LCD_SERIAL_PORT 3
+  //#define ANYCUBIC_LCD_DEBUG
+#endif
+
+//
 // Third-party or vendor-customized controller interfaces.
 // Sources should be installed in 'src/lcd/extensible_ui'.
 //
@@ -2173,16 +2183,16 @@
 //#define TFT_DRIVER AUTO
 
 //
-// FSMC display (MKS Robin, Alfawise U20, JGAurora A5S, REXYZ A1, etc.)
-// Upscaled 128x64 Marlin UI
-//
-//#define FSMC_GRAPHICAL_TFT
-
-//
 // SPI display (MKS Robin Nano V2.0, MKS Gen L V2.0)
 // Upscaled 128x64 Marlin UI
 //
 //#define SPI_GRAPHICAL_TFT
+
+//
+// FSMC display (MKS Robin, Alfawise U20, JGAurora A5S, REXYZ A1, etc.)
+// Upscaled 128x64 Marlin UI
+//
+//#define FSMC_GRAPHICAL_TFT
 
 //
 // TFT LVGL UI
@@ -2193,12 +2203,6 @@
 //
 //#define TFT_LVGL_UI_FSMC  // Robin nano v1.2 uses FSMC
 //#define TFT_LVGL_UI_SPI   // Robin nano v2.0 uses SPI
-
-//
-// Anycubic Mega TFT (AI3M)
-//
-//#define ANYCUBIC_TFT_MODEL
-//#define ANYCUBIC_TFT_DEBUG
 
 //=============================================================================
 //============================  Other Controllers  ============================
